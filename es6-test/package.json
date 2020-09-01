@@ -1,0 +1,35 @@
+{
+    "name": "es6-test",
+    "author": "@Nodelist",
+    "version": "1.0.0",
+    "description": "我的练习项目(es6 与 webpack)",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch",
+        "start": "webpack-dev-server --open",
+        "serve": "node server.js"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.18.0",
+        "babel-register": "^6.18.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^4.2.2",
+        "express": "^4.17.1",
+        "file-loader": "^6.0.0",
+        "html-webpack-plugin": "^4.3.0",
+        "style-loader": "^1.2.1",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-middleware": "^3.7.2",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ],
+        "sourceMaps": true,
+        "retainLines": true
+    }
+}
