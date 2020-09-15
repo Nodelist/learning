@@ -7,7 +7,8 @@ module.exports = {
     // entry: './src/index.js',
     entry: {
         app: './src/index.js',
-        print: './src/print.js'
+        print: './src/print.js',
+        interview: './src/interview.js'
     },
     // 使用sourceMap 将编译后的代码映射回原始源代码
     devtool: 'inline-source-map',
@@ -68,7 +69,7 @@ module.exports = {
         // filename: 'bundle.js', // 输出的文件名
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'), // 输出在哪个路径下 ./dist是默认路径
-        publicPath: '/index'
+        publicPath: '/index' // 公共路径
     },
 
     /*
