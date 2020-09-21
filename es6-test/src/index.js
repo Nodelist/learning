@@ -16,3 +16,5 @@ function compontent() {
 }
 
 document.body.appendChild(compontent());
+
+let f = new frameElement();

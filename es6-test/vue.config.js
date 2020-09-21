@@ -1,5 +1,5 @@
 /*
-    vue项目中的配置 
+    vue项目中的配置   示例
 */
 
 const path = require('path')
@@ -7,7 +7,8 @@ const path = require('path')
 module.exports = {
     //=>process.env.NODE_ENV：环境变量中存储的是开发环境还是生产环境
     publicPath: process.env.NODE_ENV === 'production' ? 'http://www.xxx.cn/' : '/',
-    //=>outputDir
+    //=>outputDir 打包输出文件夹名
+    outputDir: 'dist',
     //=>自定义目录名称，把生成的JS/CSS/图片等静态资源放置到这个目录中
     assetsDir: 'assets',
     //=>关闭生产环境下的资源映射（生产环境下不在创建xxx.js.map文件）
