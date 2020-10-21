@@ -4,7 +4,11 @@
       <li>
         <router-link :to="{ path: '/install/Router' }">安装</router-link>
       </li>
-      <li><router-link :to="{ path: '/introduction' }">介绍</router-link></li>
+      <li>
+        <router-link :to="{ path: '/introduction', props: { name: '介绍' } }"
+          >介绍</router-link
+        >
+      </li>
       <li><router-link :to="{ path: '/bases' }">基础</router-link></li>
       <li><router-link :to="{ path: '/advanced' }">进阶</router-link></li>
       <li>
