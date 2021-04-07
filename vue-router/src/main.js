@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 导航守位。作权限控制
 import '@/router/permission'
+// 自定义指令
+import '@/directive'
 
 Vue.config.productionTip = false
 
