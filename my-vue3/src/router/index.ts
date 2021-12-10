@@ -1,30 +1,36 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
+import LayoutIndex from '@/layout/index/Index.vue'
+import SystemIndex from '@/layout/index/Index.vue'
+import SystemTest from '@/layout/index/Index.vue'
+
+// 组件需用函数返回
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '',
+    redirect: '/system'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/system',
+    name: 'System',
+    // redirect: '/system/index',
+    // component: () => import('../layout/index/Index.vue'),
+    component: () => { return LayoutIndex },
+    children: [
+      {
+        path: 'index',
+        name: 'SystemIndex',
+        // component: () => import('../views/systemModule/index/Index.vue')
+        component: () => { return SystemIndex }
+      },
+      {
+        path: 'test',
+        name: 'SystemTest',
+        // component: () => import('../views/systemModule/testModule/Index.vue')
+        component: () => { return SystemTest }
+      }
+    ]
   },
-  {
-    path: '/test',
-    name: 'Test',
-    component: () => import('../views/Test.vue')
-  },
-  {
-    path: '/map3D',
-    name: 'Map3D',
-    component: () => import('../views/Map3D.vue')
-  }
 ]
 
 const router = createRouter({
