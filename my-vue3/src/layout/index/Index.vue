@@ -23,7 +23,7 @@ import Map3D from "@/components/SuperMap/Map3D.vue";
 import Tools from "./components/Tools.vue";
 import LayerTree from "./components/layerTree.vue";
 import data from "@/assets/data/data";
-import cfg from '@/units/supermap/config'
+import cfg from "@/units/supermap/config";
 export default {
   name: "Index",
   components: {
@@ -45,16 +45,19 @@ export default {
   mounted() {
     this.$Map3D.solidModelsProfile.addMoudles(data.dataSource);
     this.$Map3D.solidModelsProfile.showModel();
+
+    // let layer = this.$Map3D.dynamicLayer.addLayers(this.$Map3D.scene, data.cells)
+    // X:  106.639881884425 Y:  39.5276074995326 Z:  1113.110 
     this.$Map3D.setView({
       destination: {
-        x: -1777539.859513632,
-        y: 4564524.826305293,
-        z: 4092352.1736984774,
+        x: -1426294.5992650047,
+        y: 4718454.301683969,
+        z: 4052744.325871495,
       },
       orientation: {
-        heading: 5.331404109136935,
-        pitch: -0.4790678889350506,
-        roll: 6.2831853071795205,
+        heading: 2.1059492225339813,
+        pitch: -0.6386534606169718,
+        roll: 6.283185307179586,
       },
     });
     this.treeData = this.filterArr(data.dataSource);
@@ -72,28 +75,40 @@ export default {
 
     // 控制图层显隐
     handleCheckChange(item, treeInfo) {
-        let parentNode = treeInfo.halfCheckedNodes,
-            parentName = ''
-        const checked = treeInfo.checkedKeys.indexOf(item.id) !== -1;
-        if (parentNode.length > 0) {
-            parentName = parentNode[0].name
-            this.layerControl(item, checked, parentName);
-        } else {
-            this.layerControl(item, checked);
-        }
+      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>", item, treeInfo)
+      let camera = this.$Map3D.viewer.camera;
+      let obj = {
+        destination: camera.position,
+        orientation: {
+          heading: camera.heading,
+          pitch: camera.pitch,
+          roll: camera.roll,
+        },
+      };
+      console.log("相机参数：", obj);
+      let parentNode = treeInfo.halfCheckedNodes,
+        parentName = "";
+      const checked = treeInfo.checkedKeys.indexOf(item.id) !== -1;
+      if (parentNode.length > 0) {
+        parentName = parentNode[0].name;
+        this.layerControl(item, checked, parentName);
+      } else {
+        this.layerControl(item, checked);
+      }
     },
     // 递归控制树形图层显隐
     layerControl(data, checked, dataSource) {
+
       if (!data.dataSets || data.dataSets.length === 0) {
-          let url = ''
+        let url = "";
         //   if (dataSource) {
-              url = `${cfg.map3D.server.baseUrl + cfg.map3D.server.dataServer}/rest/data/datasources/${dataSource}/datasets/${data.name}/features/1.stream`
+        url = `${
+          cfg.map3D.server.baseUrl + cfg.map3D.server.dataServer
+        }/rest/data/datasources/${dataSource}/datasets/${
+          data.name
+        }/features/1.stream`;
         //   }
-          debugger
-          this.$Map3D.solidModelsProfile.setLayerVisibleByUrl(
-                url,
-                checked
-              );
+        this.$Map3D.solidModelsProfile.setLayerVisibleByUrl(url, checked);
       } else if (data.dataSets && data.dataSets.length > 0) {
         data.dataSets.forEach((val) => {
           this.layerControl(val, checked);
@@ -101,6 +116,9 @@ export default {
       }
     },
   },
+  beforeUnmount() {
+    this.$Map3D.viewer.destroy()
+  }
 };
 </script>
 
@@ -146,7 +164,7 @@ export default {
       z-index: 9;
     }
     .layer-tree-container {
-      width: 18%;
+      width: 15%;
       height: 75%;
       position: absolute;
       left: 1.25rem;

@@ -4,7 +4,7 @@ const title = "Cesium开发项目"
 module.exports = {
   // 基本路径
   /* 部署生产环境和开发环境下的URL：可对当前环境进行区分，baseUrl 从 Vue CLI 3.3 起已弃用，要使用publicPath */
-  publicPath: process.env.NODE_ENV === "production" ? "/test" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
   // 输出文件目录
   outputDir: "dist",
   // 放置生成的静态资源目录

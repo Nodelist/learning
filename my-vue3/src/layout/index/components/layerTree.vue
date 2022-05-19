@@ -196,6 +196,7 @@ $bgdColor: #fff;
   .title-search {
     width: 90%;
     margin: 0 auto;
+    // :deep(.el-input__inner) {}
     ::v-deep .el-input__inner {
       height: 2rem;
       font-size: 0.8rem;

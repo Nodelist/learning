@@ -13,8 +13,11 @@
       <el-button @click="dig" class="button black"
         >开挖</el-button
       >
-      <el-button @click="addhole" class="button black"
+      <el-button @click="addHole" class="button black"
         >交互钻孔</el-button
+      >
+      <el-button @click="showHole" class="button black"
+        >显示钻孔</el-button
       >
       <el-button @click="clear" class="button black"
         >清除</el-button
@@ -22,7 +25,7 @@
     </div>
 
     <div class="dzt-operate">
-      <label class="form-label">开挖深度(米) :</label>
+      <label class="form-label">开挖/钻孔深度(米) :</label>
       <input type="text" class="form-control" v-model="depth" />
     </div>
     <div>
@@ -37,6 +40,7 @@
 
 <script>
 import { dataQuery, boolOpt } from "@/api/dataQuery";
+import data from "@/assets/data/data.ts"
 export default {
   name: "Tools",
   data() {
@@ -63,7 +67,7 @@ export default {
     })
     this.$Map3D.events.initEvent('RIGHT_CLICK', res => {
       that.$Map3D.draw.clear()
-      that.$Map3D.solidModelsProfile.pointsClip(this.pointsArray)
+      that.$Map3D.solidModelsProfile.pointsClip(this.pointsArray, false, that.depth)
     })
   },
   methods: {
@@ -145,8 +149,12 @@ export default {
       this.$Map3D.draw.activeHandler('Polygon')
     },
     // 添加交互钻孔
-    addhole() {
+    addHole() {
       this.$Map3D.draw.activeHandler('Point')
+    },
+    // 显示钻孔
+    showHole() {
+      this.$Map3D.solidModelsProfile.pointsClip(data.pointsArray, true, this.depth)
     },
     // 清除
     clear() {

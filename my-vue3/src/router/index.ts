@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import LayoutIndex from '@/layout/index/Index.vue'
 import SystemIndex from '@/layout/index/Index.vue'
-import SystemTest from '@/layout/index/Index.vue'
+import SystemTest from '@/layout/test/Index.vue'
 
 // 组件需用函数返回
 const routes: Array<RouteRecordRaw> = [

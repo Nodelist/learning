@@ -43,7 +43,7 @@ export default {
             for (let url of this.modelUrls) {
                 let instance = solidModelsProfile._s3mInstanceCollection._group[url].instances._array[0];
                 // instance.updateColor(new Cesium.Color(1,1,1,0.2))
-                // instance.visible = false
+                instance.visible = true
                 //添加pbr
                 // s3mInstanceCollection.setPBRMaterialFromJSON(url, "../data/pbr/白模/scanLine.json");
             }
@@ -115,18 +115,29 @@ export default {
         }
     },
     // 点剖切（生成钻孔）
-    pointsClip(pointsArray: Array<object>) {
+    pointsClip(pointsArray: Array<object>, isDegress=false, depth: number) {
+        debugger
+        let r = 5, h = depth, pntx, pnty, pntz
         for (let i = 0; i < pointsArray.length; i++) {
-            const point = pointsArray[i];
-            const cartographic = window.Cesium.Cartographic.fromCartesian(point);
-            const pntx = window.Cesium.Math.toDegrees(cartographic.longitude);
-            const pnty = window.Cesium.Math.toDegrees(cartographic.latitude);
-            const pntz = cartographic.height - 90;
-            let geoCylinder = new window.Cesium.GeoCylinder(5.0, 5.0, 180.0);
+            let point = pointsArray[i];
+            if (isDegress) {
+                let p = this.deal(point)
+                pntx = p.x
+                pnty = p.y
+                pntz = p.z - (p.depth)/2
+                h = p.depth
+            } else {
+                const cartographic = window.Cesium.Cartographic.fromCartesian(point);
+                pntx = window.Cesium.Math.toDegrees(cartographic.longitude);
+                pnty = window.Cesium.Math.toDegrees(cartographic.latitude);
+                pntz = cartographic.height - h/2;
+            }
+            let geoCylinder = new window.Cesium.GeoCylinder(r, r, h);
             geoCylinder.geoPosition = new window.Cesium.Point3D(pntx, pnty, pntz);
             solidModelsProfile.addProfileGeometry(geoCylinder);
         }
         solidModelsProfile.build();
+        console.log(solidModelsProfile)
     },
     // 设置剖切类型 
     // KeepInside    KeepOutside
@@ -140,7 +151,6 @@ export default {
 
     // 通过 url获取图层
     getLayerByUrl(url: string) {
-        debugger
         return solidModelsProfile._s3mInstanceCollection._group[url].instances._array[0]
     },
 
@@ -157,5 +167,10 @@ export default {
         if(instance) {
             instance.visible = bool
         }
+    },
+
+
+    deal(data: any) {
+        return data
     }
 }
