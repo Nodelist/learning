@@ -1,5 +1,6 @@
 let s3mInstance: any
 
+// S3M实例化模型类
 export default {
     viewer: {},
     scene: {},

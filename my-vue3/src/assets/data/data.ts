@@ -366,7 +366,7 @@ export default {
         {
             id: 1,
             name: 'DZ_CS',
-            isShow: true,
+            isShow: false,
             dataSets: [
                 {
                     id: 123,
@@ -402,7 +402,7 @@ export default {
                     id: 128,
                     name: 'T11_页岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -426,7 +426,7 @@ export default {
                     id: 132,
                     name: 'T15_砂页岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
@@ -462,7 +462,7 @@ export default {
                     id: 128,
                     name: 'T21_中砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -504,7 +504,7 @@ export default {
                     id: 128,
                     name: 'T28_黏土',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -528,7 +528,7 @@ export default {
                     id: 132,
                     name: 'T32_黏土透镜体',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
@@ -577,7 +577,7 @@ export default {
                     id: 128,
                     name: 'T37_砂质页岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -601,7 +601,7 @@ export default {
                     id: 132,
                     name: 'T39_砂页岩，12煤',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
@@ -637,7 +637,7 @@ export default {
                     id: 128,
                     name: 'T45_页岩，13煤',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -679,7 +679,7 @@ export default {
                     id: 128,
                     name: 'T52_石英砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
@@ -703,7 +703,7 @@ export default {
                     id: 132,
                     name: 'T56_细砂岩，黏土',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
@@ -733,7 +733,7 @@ export default {
                     id: 132,
                     name: '底板',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 }
             ],
         },
@@ -747,7 +747,7 @@ export default {
                     id: 123,
                     name: 'T8_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 124,
@@ -765,31 +765,31 @@ export default {
                     id: 126,
                     name: 'T11_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 127,
                     name: 'T12_2煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 128,
                     name: 'T13_中粒砂岩夹细粒砂岩夹3煤和薄泥岩',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 129,
                     name: 'T14_中粒砂岩、粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 130,
                     name: 'T15_粗粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/粗砂岩.png'
                 },
                 {
                     id: 131,
@@ -801,43 +801,43 @@ export default {
                     id: 132,
                     name: 'T17_粉砂岩夹4下煤',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 133,
                     name: 'T18_粗粒砂岩、下部见5煤',
                     num: 1,
-                    image: '最终材质-HBC/铝土泥岩.png'
+                    image: '最终材质-HBC/粗砂岩.png'
                 },
                 {
                     id: 134,
                     name: 'T19_粉砂岩夹细粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 125,
                     name: 'T20_泥岩夹6煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 126,
                     name: 'T21_铝土岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/铝土泥岩.png'
                 },
                 {
                     id: 127,
                     name: 'T22_7煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 128,
                     name: 'T23_中砾砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 129,
@@ -849,158 +849,158 @@ export default {
                     id: 123,
                     name: 'T25_泥岩夹腕足类化石，下部见8煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 124,
                     name: 'T26_中粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 125,
                     name: 'T27_粉砂岩夹菱铁矿结核',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 126,
                     name: 'T28_中粒砂岩 ',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 127,
                     name: 'T29_粉砂岩夹菱铁矿结核',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 128,
                     name: 'T30_中粒砂岩、粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 129,
                     name: 'T31_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 130,
                     name: 'T32_中粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 131,
                     name: 'T33_粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 132,
                     name: 'T34_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
                     name: 'T35_9煤',
                     num: 1,
-                    image: '最终材质-HBC/铝土泥岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 134,
                     name: 'T36_砂质泥岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
 
                 {
                     id: 123,
                     name: 'T37_10煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 124,
                     name: 'T38_粉砂岩夹细粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 125,
                     name: 'T39_泥岩夹11煤含植物化石',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 126,
                     name: 'T40_粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 127,
                     name: 'T41_粗粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/粗砂岩.png'
                 },
                 {
                     id: 128,
                     name: 'T42_泥质砂岩夹12上煤',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 129,
                     name: 'T43_12煤',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 130,
                     name: 'T44_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 131,
                     name: 'T45_细粒砂岩、粉砂岩夹植物化石',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 132,
                     name: 'T46_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 133,
                     name: 'T47_粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/铝土泥岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 134,
                     name: 'T48_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 125,
                     name: 'T49_13上2煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 126,
                     name: 'T50_粉砂岩夹13上1煤',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 127,
@@ -1012,37 +1012,37 @@ export default {
                     id: 128,
                     name: 'T52_粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 129,
                     name: 'T53_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 123,
                     name: 'T54_13煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/煤层.png'
                 },
                 {
                     id: 124,
                     name: 'T55_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 125,
                     name: 'T56_粉砂岩夹13下煤',
                     num: 1,
-                    image: '最终材质-HBC/中砂岩.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 126,
                     name: 'T57_泥岩',
                     num: 1,
-                    image: '最终材质-HBC/粗砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 127,
@@ -1054,13 +1054,13 @@ export default {
                     id: 128,
                     name: 'T59_粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 129,
                     name: 'T60_泥岩夹14煤',
                     num: 1,
-                    image: '最终材质-HBC/粉细砂岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 130,
@@ -1072,31 +1072,31 @@ export default {
                     id: 131,
                     name: 'T62_中粒砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/中砂岩.png'
                 },
                 {
                     id: 132,
                     name: 'T63_粉砂岩夹细粒砂岩含植物化石',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 133,
                     name: 'T64_泥岩夹16煤',
                     num: 1,
-                    image: '最终材质-HBC/铝土泥岩.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 134,
                     name: 'T65_细粒砂岩夹粉砂岩',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/粉细砂岩.png'
                 },
                 {
                     id: 130,
                     name: 'T66_泥岩夹17煤',
                     num: 1,
-                    image: '最终材质-HBC/煤层.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 131,
@@ -1108,13 +1108,13 @@ export default {
                     id: 132,
                     name: '模型底',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 },
                 {
                     id: 132,
                     name: '乌达断层上盘',
                     num: 1,
-                    image: '最终材质-HBC/泥岩111.png'
+                    image: '最终材质-HBC/泥岩.png'
                 }
             ],
         }
